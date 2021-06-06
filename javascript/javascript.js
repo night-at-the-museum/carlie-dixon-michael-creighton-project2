@@ -18,26 +18,43 @@ galleryApp.url = 'https://api.artic.edu/api/v1/exhibitions?';
 galleryApp.exList = [];
 galleryApp.imageAPI = [];
 galleryApp.counter
+galleryApp.index
 
 // event listeners (does it go in init? can it stay here?)
-const buttonEl = document.querySelector('.choose')
-buttonEl.addEventListener('click', function (e) {
+const choiceEl = document.querySelector('.choose')
+choiceEl.addEventListener('click', function (e) {
     e.preventDefault ();
     // get value of option
     const select = document.getElementById('exhibition-choice');
-    const index = select.value
-    // console.log(galleryApp.exList)
-    // use to the value to grab gallery from array
-    for (i = 0; i < 5; i++) {
-    const id = galleryApp.exList[index].artwork_ids[i]
-    // create imageAPI link
-    const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
-    galleryApp.imageAPI.push(imageAPI)
-    }
-    // call for img src (function)
-    galleryApp.counter = 0
-    galleryApp.getImage(galleryApp.imageAPI[0]);
-});
+    galleryApp.index = Number(select.value);
+    galleryApp.createImgArray()
+    });
+    
+    galleryApp.createImgArray = () => {
+        galleryApp.imageAPI = [];
+        // console.log(galleryApp.exList)
+        // use to the value to grab gallery from array
+        for (i = 0; i < 5; i++) {
+        const id = galleryApp.exList[galleryApp.index].artwork_ids[i]
+        // create imageAPI link
+        const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
+        galleryApp.imageAPI.push(imageAPI)
+        }
+        // call for img src (function)
+        galleryApp.counter = 0
+        galleryApp.getImage(galleryApp.imageAPI[0]);
+    };
+
+const nextEl = document.querySelector('.next')
+nextEl.addEventListener('click', function (e) {
+    e.preventDefault ();
+    if (galleryApp.counter > 4) {
+        galleryApp.index += 1;
+        galleryApp.createImgArray();
+    }else {
+    galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter])
+    };
+})
 
 // function to get exhibition api based on users choice
 // users choice will determine index number
