@@ -16,6 +16,8 @@ const galleryApp = {};
 
 galleryApp.url = 'https://api.artic.edu/api/v1/exhibitions?';
 galleryApp.exList = [];
+galleryApp.imageAPI = [];
+galleryApp.counter
 
 // event listeners (does it go in init? can it stay here?)
 const buttonEl = document.querySelector('.choose')
@@ -24,13 +26,17 @@ buttonEl.addEventListener('click', function (e) {
     // get value of option
     const select = document.getElementById('exhibition-choice');
     const index = select.value
-    console.log(galleryApp.exList)
+    // console.log(galleryApp.exList)
     // use to the value to grab gallery from array
-    const id = galleryApp.exList[index].artwork_ids[0]
+    for (i = 0; i < 5; i++) {
+    const id = galleryApp.exList[index].artwork_ids[i]
     // create imageAPI link
     const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
+    galleryApp.imageAPI.push(imageAPI)
+    }
     // call for img src (function)
-    galleryApp.getImage(imageAPI);
+    galleryApp.counter = 0
+    galleryApp.getImage(galleryApp.imageAPI[0]);
 });
 
 // function to get exhibition api based on users choice
@@ -72,22 +78,9 @@ galleryApp.exOptions = (galleries) => {
     
 }
 
-// takes gallery API link and produces individual image API based in based on incrementing index number
-galleryApp.getApi = (exAPI) => {
-    fetch(exAPI)
-    .then(secondResult => {
-        return secondResult.json();
-    })
-    .then(secondJsonRes => {
-        // console.log(secondJsonRes)
-        const id = secondJsonRes.data.artwork_ids[0];
-        const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
-        // console.log(imageAPI)
-        galleryApp.getImage(imageAPI);
-    })
-}
 // takes selected image and produces the src for display
 galleryApp.getImage = (imageAPI) => {
+    galleryApp.counter += 1;
     fetch(imageAPI)
     .then(secondResult => {
         return secondResult.json();
