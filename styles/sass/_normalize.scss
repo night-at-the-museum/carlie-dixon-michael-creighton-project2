@@ -23,13 +23,6 @@ img {
     display: block;
 }
 
-// to control for very large screens
-header,
-main {
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
 body {
-    background-color: $primary;
+    overflow: hidden;
 }

@@ -30,20 +30,20 @@ choiceEl.addEventListener('click', function (e) {
     galleryApp.createImgArray()
     });
     
-    galleryApp.createImgArray = () => {
-        galleryApp.imageAPI = [];
-        // console.log(galleryApp.exList)
-        // use to the value to grab gallery from array
-        for (i = 0; i < 5; i++) {
-        const id = galleryApp.exList[galleryApp.index].artwork_ids[i]
-        // create imageAPI link
-        const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
-        galleryApp.imageAPI.push(imageAPI)
-        }
-        // call for img src (function)
-        galleryApp.counter = 0
-        galleryApp.getImage(galleryApp.imageAPI[0]);
-    };
+galleryApp.createImgArray = () => {
+    galleryApp.imageAPI = [];
+    // console.log(galleryApp.exList)
+    // use to the value to grab gallery from array
+    for (i = 0; i < 5; i++) {
+    const id = galleryApp.exList[galleryApp.index].artwork_ids[i]
+    // create imageAPI link
+    const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
+    galleryApp.imageAPI.push(imageAPI)
+    }
+    // call for img src (function)
+    galleryApp.counter = 0
+    galleryApp.getImage(galleryApp.imageAPI[0]);
+};
 
 const nextEl = document.querySelector('.next')
 nextEl.addEventListener('click', function (e) {

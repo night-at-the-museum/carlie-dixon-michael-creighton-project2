@@ -1,0 +1,15 @@
+.blurb-container {
+    border: solid black 2px;
+    width: 50%;
+    margin-left: 5%;
+    padding: 5px;
+}
+
+.blurb-title-flex {
+    display: flex;
+
+    .img-cont {
+        width: 15%;
+        margin: 10px;
+    }
+}
