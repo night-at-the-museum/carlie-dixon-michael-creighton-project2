@@ -1,11 +1,3 @@
-// url https://api.artic.edu/api/v1/artworks
-// boiler image url https://www.artic.edu/iiif/2/${}/full/843,/0/default.jpg
-// imageAPI comes from https://api.artic.edu/api/v1/artworks/${id grabbed from secondJsonRes}
-
-// to get current exhibition title: galleryApp.exList[galleryApp.index].title
-
-
-
 const galleryApp = {};
 
 galleryApp.url = 'https://api.artic.edu/api/v1/exhibitions?';
@@ -105,16 +97,19 @@ galleryApp.exOptions = (galleries) => {
 
 // takes selected image and produces the src for display
 galleryApp.getImage = (imageAPI) => {
+    
     galleryApp.counter += 1;
     fetch(imageAPI)
     .then(secondResult => {
+        console.log(secondResult);
         return secondResult.json();
     })
     .then(secondJsonRes => {
-        // console.log(secondJsonRes)
+        console.log(secondJsonRes);
         const imageId = secondJsonRes.data.image_id;
-        const displayImage = document.querySelector(".art")
+        const displayImage = document.querySelector(".art");
         displayImage.src = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`
+        console.log(galleryApp.imageAPI[0])
     })
 }
 
