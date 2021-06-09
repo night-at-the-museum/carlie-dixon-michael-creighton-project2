@@ -101,15 +101,12 @@ galleryApp.getImage = (imageAPI) => {
     galleryApp.counter += 1;
     fetch(imageAPI)
     .then(secondResult => {
-        console.log(secondResult);
         return secondResult.json();
     })
     .then(secondJsonRes => {
-        console.log(secondJsonRes);
         const imageId = secondJsonRes.data.image_id;
         const displayImage = document.querySelector(".art");
-        displayImage.src = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`
-        console.log(galleryApp.imageAPI[0])
+        displayImage.src = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
     })
 }
 
