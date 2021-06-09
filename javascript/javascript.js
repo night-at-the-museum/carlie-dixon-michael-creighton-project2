@@ -118,3 +118,10 @@ galleryApp.init = () => {
 }
 
 galleryApp.init();
+
+
+// url https://api.artic.edu/api/v1/artworks
+// boiler image url https://www.artic.edu/iiif/2/${}/full/843,/0/default.jpg
+// imageAPI comes from https://api.artic.edu/api/v1/artworks/${id grabbed from secondJsonRes}
+
+// to get current exhibition title: galleryApp.exList[galleryApp.index].title
