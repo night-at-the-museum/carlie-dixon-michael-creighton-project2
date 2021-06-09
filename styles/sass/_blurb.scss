@@ -1,15 +1,24 @@
-.blurb-container {
+.blurb-cont {
     border: solid black 2px;
     width: 50%;
     margin-left: 5%;
     padding: 5px;
+    background: white;
 }
 
 .blurb-title-flex {
     display: flex;
 
-    .img-cont {
+    .img-cont1 {
         width: 15%;
         margin: 10px;
     }
+}
+
+.dont-show {
+    display: none;
+}
+
+.do-show {
+    display: block;
 }

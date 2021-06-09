@@ -1,26 +1,13 @@
-// .img-flex {
-//     display: flex;
-//     justify-content: space-between;
-// }
-
-// .vase-cont {
-//     width: 30%;
-// }
-
 // .tail-cont {
-//     width: 70%;
+//     position: absolute;
+//     bottom: -70px;
+//     right: 0;
+//     transform: rotate(-25deg);
 // }
-
-.tail-cont {
-    position: absolute;
-    bottom: -70px;
-    right: 0;
-    transform: rotate(-25deg);
-}
 
 .vase-cont {
     position: absolute;
-    bottom: 0;
-    left: 0;
+    bottom: 5%;
+    left: 5%;
     width: 100px;
 }

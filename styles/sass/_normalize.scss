@@ -8,6 +8,11 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
+h1,
+h2,
+p {
+    margin: 0;
+}
 .wrapper {
     max-width: 1500px;
     width: 80%;
@@ -23,6 +28,22 @@ img {
     display: block;
 }
 
-body {
-    overflow: hidden;
+header {
+    height: 15%;
+}
+
+main {
+    height: 80%;
+}
+
+footer {
+    background: $dark;
+    color: $light;
+    height: 5%;
+    text-align: center;
+}
+
+section.museum {
+    height: 100%;
+    position: relative;
 }

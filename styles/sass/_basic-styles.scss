@@ -1,1 +1,10 @@
 // all basic text styles and background colors
+
+h1 {
+    color: $light;
+}
+
+h2 {
+    color: $accent;
+    margin: 0;
+}

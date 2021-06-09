@@ -244,6 +244,12 @@ template {
   overflow: hidden;
 }
 
+h1,
+h2,
+p {
+  margin: 0;
+}
+
 .wrapper {
   max-width: 1500px;
   width: 80%;
@@ -259,8 +265,42 @@ img {
   display: block;
 }
 
+header {
+  height: 15%;
+}
+
+main {
+  height: 80%;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  height: 5%;
+  text-align: center;
+}
+
+section.museum {
+  height: 100%;
+  position: relative;
+}
+
+h1 {
+  color: #fff;
+}
+
+h2 {
+  color: #B51A38;
+  margin: 0;
+}
+
 body {
   overflow: hidden;
+  background-image: url(../assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 }
 
 h1 {
@@ -291,18 +331,19 @@ h1 {
 
 .dino-head {
   position: absolute;
-  top: 0px;
-  right: -65px;
+  top: 11px;
+  right: -55px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   max-width: 45%;
 }
 
-.blurb-container {
+.blurb-cont {
   border: solid black 2px;
   width: 50%;
   margin-left: 5%;
   padding: 5px;
+  background: white;
 }
 
 .blurb-title-flex {
@@ -310,28 +351,37 @@ h1 {
   display: -ms-flexbox;
   display: flex;
 }
-.blurb-title-flex .img-cont {
+.blurb-title-flex .img-cont1 {
   width: 15%;
   margin: 10px;
+}
+
+.dont-show {
+  display: none;
+}
+
+.do-show {
+  display: block;
 }
 
 .museum button {
   position: absolute;
   top: 50%;
   right: 10%;
+  z-index: 10;
 }
 
-.tail-cont {
+.img-cont2 {
+  max-width: 20%;
+  max-height: 40%;
   position: absolute;
-  bottom: -70px;
-  right: 0;
-  -webkit-transform: rotate(-25deg);
-          transform: rotate(-25deg);
+  left: 35%;
+  bottom: 35%;
 }
 
 .vase-cont {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 5%;
+  left: 5%;
   width: 100px;
 }

@@ -2,13 +2,7 @@
 // boiler image url https://www.artic.edu/iiif/2/${}/full/843,/0/default.jpg
 // imageAPI comes from https://api.artic.edu/api/v1/artworks/${id grabbed from secondJsonRes}
 
-// exhibits we want
-// Ink on Paper: Japanese Monochromatic Prints (2009)
-// 18 America after the Fall: Painting in the 1930s
-// 23 Aaron Siskind: Abstractions
-// 25 Van Dyck, Rembrandt, and the Portrait Print
-// 34 Kemang Wa Lehulere: In All My Wildest Dreams
-// 31 Master Drawings Unveiled: 25 Years of Major Acquisitions
+// to get current exhibition title: galleryApp.exList[galleryApp.index].title
 
 
 
@@ -20,19 +14,42 @@ galleryApp.imageAPI = [];
 galleryApp.counter
 galleryApp.index
 
-// event listeners (does it go in init? can it stay here?)
+// event listeners
+galleryApp.chooseButton = () => {
 const choiceEl = document.querySelector('.choose')
 choiceEl.addEventListener('click', function (e) {
     e.preventDefault ();
     // get value of option
     const select = document.getElementById('exhibition-choice');
     galleryApp.index = Number(select.value);
-    galleryApp.createImgArray()
-    });
+    galleryApp.createImgArray();
+    document.querySelector('.next').classList.remove('dont-show');
+    galleryApp.nextButton();
+    document.querySelector('.blurb-cont').classList.add('dont-show');
     
+    });
+};
+
+galleryApp.nextButton = () => {
+    const nextEl = document.querySelector('.next')
+    nextEl.addEventListener('click', function (e) {
+        e.preventDefault ();
+        if (galleryApp.counter > 4) {
+            if (galleryApp.index + 1 >= galleryApp.exList.length) {
+                galleryApp.index = 0;
+            } else {
+                galleryApp.index += 1;
+            }
+            galleryApp.createImgArray();
+        }else {
+        galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter])
+        };
+    })
+};
+
+// function to create each image API in an exhibit
 galleryApp.createImgArray = () => {
     galleryApp.imageAPI = [];
-    // console.log(galleryApp.exList)
     // use to the value to grab gallery from array
     for (i = 0; i < 5; i++) {
     const id = galleryApp.exList[galleryApp.index].artwork_ids[i]
@@ -45,16 +62,6 @@ galleryApp.createImgArray = () => {
     galleryApp.getImage(galleryApp.imageAPI[0]);
 };
 
-const nextEl = document.querySelector('.next')
-nextEl.addEventListener('click', function (e) {
-    e.preventDefault ();
-    if (galleryApp.counter > 4) {
-        galleryApp.index += 1;
-        galleryApp.createImgArray();
-    }else {
-    galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter])
-    };
-})
 
 // function to get exhibition api based on users choice
 // users choice will determine index number
@@ -75,6 +82,7 @@ galleryApp.getExhibition = () => {
             }
         }
         galleryApp.exOptions(galleryApp.exList);
+        galleryApp.chooseButton();
     })
 };
 

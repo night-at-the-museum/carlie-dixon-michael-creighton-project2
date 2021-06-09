@@ -1,10 +1,14 @@
 // variables
+$light: #fff;
+$dark: #000;
+$accent: #B51A38;
 
 // mixins
 
 // partials
 @import "normalize";
-
+@import "basic-styles";
+@import "body";
 @import "header";
 @import "blurb";
 @import "museum";
