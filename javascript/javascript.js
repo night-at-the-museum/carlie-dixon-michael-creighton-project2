@@ -54,7 +54,7 @@ galleryApp.createImgArray = () => {
     for (i = 0; i < 5; i++) {
     const id = galleryApp.exList[galleryApp.index].artwork_ids[i]
     // create imageAPI link
-    const imageAPI = `https:api.artic.edu/api/v1/artworks/${id}`
+    const imageAPI = `https://api.artic.edu/api/v1/artworks/${id}`
     galleryApp.imageAPI.push(imageAPI)
     }
     // call for img src (function)
