@@ -346,45 +346,45 @@ h1 {
 }
 
 .dino-head:hover {
-  -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+          animation: shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
 }
 
 @-webkit-keyframes shake {
   10%, 90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-            transform: translate3d(-1px, 0, 0);
+    -webkit-transform: translate3d(-1px, -1px, 0);
+            transform: translate3d(-1px, -1px, 0);
   }
   20%, 80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
+    -webkit-transform: translate3d(2px, 2px, 0);
+            transform: translate3d(2px, 2px, 0);
   }
   30%, 50%, 70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
+    -webkit-transform: translate3d(-6px, -4px, 0);
+            transform: translate3d(-6px, -4px, 0);
   }
   40%, 60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
+    -webkit-transform: translate3d(6px, 4px, 0);
+            transform: translate3d(6px, 4px, 0);
   }
 }
 
 @keyframes shake {
   10%, 90% {
-    -webkit-transform: translate3d(-1px, 0, 0);
-            transform: translate3d(-1px, 0, 0);
+    -webkit-transform: translate3d(-1px, -1px, 0);
+            transform: translate3d(-1px, -1px, 0);
   }
   20%, 80% {
-    -webkit-transform: translate3d(2px, 0, 0);
-            transform: translate3d(2px, 0, 0);
+    -webkit-transform: translate3d(2px, 2px, 0);
+            transform: translate3d(2px, 2px, 0);
   }
   30%, 50%, 70% {
-    -webkit-transform: translate3d(-4px, 0, 0);
-            transform: translate3d(-4px, 0, 0);
+    -webkit-transform: translate3d(-6px, -4px, 0);
+            transform: translate3d(-6px, -4px, 0);
   }
   40%, 60% {
-    -webkit-transform: translate3d(4px, 0, 0);
-            transform: translate3d(4px, 0, 0);
+    -webkit-transform: translate3d(6px, 4px, 0);
+            transform: translate3d(6px, 4px, 0);
   }
 }
 .blurb-cont {
@@ -443,6 +443,6 @@ h1 {
 }
 
 .vase-cont:hover {
-  -webkit-transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.05);
-          transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.05);
+  -webkit-transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
+          transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
 }
