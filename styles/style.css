@@ -424,8 +424,8 @@ h1 {
   max-width: 20%;
   max-height: 40%;
   position: absolute;
-  left: 35%;
-  bottom: 35%;
+  left: 44%;
+  bottom: 32%;
 }
 .img-cont2 img {
   border: 25px gold ridge;
@@ -436,13 +436,13 @@ h1 {
   bottom: 5%;
   left: 5%;
   width: 100px;
-  -webkit-transition: -webkit-transform 3s ease-out;
-  transition: -webkit-transform 3s ease-out;
-  transition: transform 3s ease-out;
-  transition: transform 3s ease-out, -webkit-transform 3s ease-out;
+  -webkit-transition: -webkit-transform 2s ease-out;
+  transition: -webkit-transform 2s ease-out;
+  transition: transform 2s ease-out;
+  transition: transform 2s ease-out, -webkit-transform 2s ease-out;
 }
 
 .vase-cont:hover {
-  -webkit-transform: translateX(30vw) translateY(-15vh) rotate(500deg) scale(0);
-          transform: translateX(30vw) translateY(-15vh) rotate(500deg) scale(0);
+  -webkit-transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.05);
+          transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.05);
 }

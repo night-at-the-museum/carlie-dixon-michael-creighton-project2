@@ -10,7 +10,7 @@
     bottom: 5%;
     left: 5%;
     width: 100px;
-    transition: transform 3s ease-out;
+    transition: transform 2s ease-out;
 }
 
 .vase-cont:hover {
@@ -20,7 +20,7 @@
     // transform: scale(0) rotate(1080deg) ;
     // left: 90%;
 
-    transform: translateX(30vw) translateY(-15vh) rotate(500deg) scale(0);
+    transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(.05);
 }   
 
     
