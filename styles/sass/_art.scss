@@ -10,4 +10,17 @@
     bottom: 5%;
     left: 5%;
     width: 100px;
+    transition: transform 2s ease-out;
 }
+
+.vase-cont:hover {
+    // transform: scale(1.5) rotate(1080deg);
+
+
+    // transform: scale(0) rotate(1080deg) ;
+    // left: 90%;
+
+    transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
+}   
+
+    
