@@ -1,4 +1,23 @@
-// all basic text styles and background colors
+header {
+    min-height: 20vh;
+    // position: relative;
+    // overflow: hidden;
+}
+
+main {
+    min-height: 75vh;
+}
+
+footer {
+    background: $dark;
+    color: $light;
+    min-height: 5vh;
+    text-align: center;
+    position: relative;
+    p{
+        padding-top: calc(3vh - 23px);
+    }
+}
 
 h1 {
     color: $light;
@@ -7,4 +26,10 @@ h1 {
 h2 {
     color: $accent;
     margin: 0;
+    font-family: $titles;
+}
+
+p{
+    font-family: $para;
+    margin: 5px 0;
 }

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/3305f500e4.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Lora&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css">
     <title>Night at the Museum</title>
 </head>
@@ -31,36 +33,45 @@
                     <div class = "img-cont1">
                         <img src="./assets/the-art-institute-of-chicago-logo-vector (1).png" alt="Logo for art institute of Chicago">
                     </div>
-                    <h2>Welcome to The Art Institute of Chicago</h2>
+                    <div class="mus-title-cont">
+                        <h2>Welcome to The Art Institute of Chicago</h2>
+                    </div>
                 </div>
-                <p>Here is your one way ticket through our museum. Beware, the artifacts don’t know you are here and we don’t know what they do when humans aren’t watching. Where would you like to begin?</p>
+                <p>Here is your one way ticket through our museum. Beware, the artifacts don’t know you are here and we don’t know what they do when humans aren’t watching. </p>
+                <p>Where would you like to begin?</p>
                 <form action="">
                     <label for="exhibition-choice" class="sr-only"></label>
                     <select name="exhibition-choice" id="exhibition-choice">
                         <option value disabled selected>Please Choose an Exhibit</option>
                     </select>
-                    <button type="submit" class="choose">submit</button>
+                    <button type="submit" class="choose">Enter Now</button>
                 </form>
             </div>
         </section>
         <section class="museum">
-            <div class="img-cont2">
-                <img src="" alt="" class="art">
-            </div>
-            <button class="next dont-show">Next</button>
-        </section>
-        <section class="art">
-            <div class="img-flex">
-                <div class="vase-cont">
-                    <img src="./assets/pngwing.com.png" alt="Black and gold ceramic vase.">
+            <div class="museum-flex1">
+                <div class="art-info">
+                    <div class="ex-title-cont dont-show">
+                        <h2>Exhibit:</h2>
+                        <h3 class="ex-title"></h3>
+                    </div>
+                    <div class="art-text-cont dont-show">
+                        <p class="art-text"></p>
+                        <p class="artist-text"></p>
+                    </div>
                 </div>
-                <!-- <div class="tail-cont">
-                    <img src="./assets/bef06ef1c899fab62f019663dd9b6133 (1).png" alt="Dinosaur skeleton's tail.">
-                </div> -->
+                <div class="img-cont2">
+                    <img src="" alt="" class="art dont-show">
+                </div>
             </div>
+            <button class="next dont-show">NEXT<i class="fas fa-arrow-right"></i></button>
         </section>
+
     </main>
     <footer>
+        <div class="vase-cont">
+            <img src="./assets/pngwing.com.png" alt="Black and gold ceramic vase.">
+        </div>
         <p>Copyright <i class="far fa-copyright"></i> 2021 Juno College</p>
     </footer>
     <script src="javascript/javascript.js"></script>

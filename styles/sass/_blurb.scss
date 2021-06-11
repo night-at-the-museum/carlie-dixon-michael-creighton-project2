@@ -1,24 +1,48 @@
 .blurb-cont {
-    border: solid black 2px;
+    border: $dark 1px solid;
     width: 50%;
     margin-left: 5%;
     padding: 5px;
-    background: white;
+    background: $light;
+    border-radius: 5px;
 }
 
-.blurb-title-flex {
-    display: flex;
 
-    .img-cont1 {
-        width: 15%;
-        margin: 10px;
-    }
+.img-cont1 {
+    width: 20%;
+    margin: 0 auto;
+
 }
+.mus-title-cont {
+
+    text-align: center;
+}
+
+
 
 .dont-show {
     display: none;
 }
 
-.do-show {
-    display: block;
+
+
+select {
+    width: 60%;
+    font-family: $para;
+    background-color: $dark;
+    border: none;
+    border-radius: 7px;
+    color: $light;
+    padding: 5px;
+    option {
+        font-family: $para;
+    }
+}
+
+.choose {
+    background-color: $dark;
+    border: none;
+    border-radius: 7px;
+    color: $light;
+    padding: 5px;
 }

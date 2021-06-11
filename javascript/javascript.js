@@ -8,17 +8,17 @@ galleryApp.index
 
 // event listeners
 galleryApp.chooseButton = () => {
-    const choiceEl = document.querySelector('.choose')
-    choiceEl.addEventListener('click', function (e) {
-        e.preventDefault ();
-        // get value of option
-        const select = document.getElementById('exhibition-choice');
-        galleryApp.index = Number(select.value);
-        galleryApp.createImgArray();
-        document.querySelector('.next').classList.remove('dont-show');
-        galleryApp.nextButton();
-        document.querySelector('.blurb-cont').classList.add('dont-show');
-    
+const choiceEl = document.querySelector('.choose')
+choiceEl.addEventListener('click', function (e) {
+    e.preventDefault ();
+    // get value of option
+    const select = document.getElementById('exhibition-choice');
+    galleryApp.index = Number(select.value);
+    galleryApp.createImgArray();
+    document.querySelector('.next').classList.remove('dont-show');
+    galleryApp.nextButton();
+    document.querySelector('.blurb').classList.add('dont-show');
+    galleryApp.exTitle();
     });
 };
 
@@ -46,12 +46,14 @@ galleryApp.nextButton = () => {
         if (galleryApp.counter > 4) {
             if (galleryApp.index + 1 >= galleryApp.exList.length) {
                 galleryApp.index = 0;
+                galleryApp.exTitle();
             } else {
                 galleryApp.index += 1;
+                galleryApp.exTitle();
             }
             galleryApp.createImgArray();
         }else {
-        galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter])
+        galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter]);
         };
     })
 };
@@ -123,9 +125,30 @@ galleryApp.getImage = (imageAPI) => {
     .then(secondJsonRes => {
         const imageId = secondJsonRes.data.image_id;
         const displayImage = document.querySelector(".art");
+        const textCont = document.querySelector(".art-text-cont")
         displayImage.src = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
+        displayImage.classList.remove('dont-show');
+        textCont.classList.remove('dont-show');
+        galleryApp.artInfo(secondJsonRes.data.title, secondJsonRes.data.artist_title);
     })
 }
+
+// function to display exhibit title
+galleryApp.exTitle = () => {
+    const titleCont = document.querySelector('.ex-title-cont');
+    titleCont.classList.remove('dont-show');
+    const title = document.querySelector(".ex-title");
+    title.textContent = galleryApp.exList[galleryApp.index].title;
+};
+
+// function to display art info
+galleryApp.artInfo = (title, artist) => {
+    const artTitle = document.querySelector('.art-text');
+    const artistName = document.querySelector('.artist-text');
+    artTitle.textContent = title;
+    artistName.textContent = artist;
+}
+
 
 galleryApp.init = () => {
     galleryApp.getExhibition();
