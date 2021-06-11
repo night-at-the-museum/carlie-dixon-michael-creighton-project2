@@ -8,17 +8,34 @@ galleryApp.index
 
 // event listeners
 galleryApp.chooseButton = () => {
-const choiceEl = document.querySelector('.choose')
-choiceEl.addEventListener('click', function (e) {
-    e.preventDefault ();
-    // get value of option
-    const select = document.getElementById('exhibition-choice');
-    galleryApp.index = Number(select.value);
-    galleryApp.createImgArray();
-    document.querySelector('.next').classList.remove('dont-show');
-    galleryApp.nextButton();
-    document.querySelector('.blurb-cont').classList.add('dont-show');
+    const choiceEl = document.querySelector('.choose')
+    choiceEl.addEventListener('click', function (e) {
+        e.preventDefault ();
+        // get value of option
+        const select = document.getElementById('exhibition-choice');
+        galleryApp.index = Number(select.value);
+        galleryApp.createImgArray();
+        document.querySelector('.next').classList.remove('dont-show');
+        galleryApp.nextButton();
+        document.querySelector('.blurb-cont').classList.add('dont-show');
     
+    });
+};
+
+galleryApp.aniListeners = () => {
+    // listen for mouseover on vase
+    const vaseEl = document.querySelector('.vase-cont');
+    vaseEl.addEventListener('mouseover', function() {
+        vaseEl.classList.toggle('roll');
+
+    });
+
+    // listen for mouseover on next button
+    const dinoNextEl = document.querySelector('.next');
+    const dinoHead = document.querySelector('.dino-head');
+    dinoNextEl.addEventListener('mouseover', function() {
+        dinoHead.classList.toggle('no-bite');
+        dinoHead.classList.toggle('bite');
     });
 };
 
@@ -112,6 +129,7 @@ galleryApp.getImage = (imageAPI) => {
 
 galleryApp.init = () => {
     galleryApp.getExhibition();
+    galleryApp.aniListeners();
 }
 
 galleryApp.init();

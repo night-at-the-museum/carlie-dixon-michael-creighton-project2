@@ -337,56 +337,128 @@ h1 {
   position: absolute;
   top: 11px;
   right: -55px;
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
   max-width: 45%;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
   z-index: 10;
 }
 
 .dino-head:hover {
-  -webkit-animation: shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
-          animation: shake 0.62s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  -webkit-animation: shake 0.5s;
+          animation: shake 0.5s;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-1px, -1px, 0);
-            transform: translate3d(-1px, -1px, 0);
+  0% {
+    -webkit-transform: rotate(-45deg) translate(1px, 1px);
+            transform: rotate(-45deg) translate(1px, 1px);
   }
-  20%, 80% {
-    -webkit-transform: translate3d(2px, 2px, 0);
-            transform: translate3d(2px, 2px, 0);
+  10% {
+    -webkit-transform: rotate(-45deg) translate(-1px, -4px);
+            transform: rotate(-45deg) translate(-1px, -4px);
   }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-6px, -4px, 0);
-            transform: translate3d(-6px, -4px, 0);
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-5px, 0px);
+            transform: rotate(-45deg) translate(-5px, 0px);
   }
-  40%, 60% {
-    -webkit-transform: translate3d(6px, 4px, 0);
-            transform: translate3d(6px, 4px, 0);
+  30% {
+    -webkit-transform: rotate(-45deg) translate(5px, 4px);
+            transform: rotate(-45deg) translate(5px, 4px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(1px, -1px);
+            transform: rotate(-45deg) translate(1px, -1px);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg) translate(-1px, 4px);
+            transform: rotate(-45deg) translate(-1px, 4px);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) translate(-5px, 1px);
+            transform: rotate(-45deg) translate(-5px, 1px);
+  }
+  70% {
+    -webkit-transform: rotate(-45deg) translate(5px, 1px);
+            transform: rotate(-45deg) translate(5px, 1px);
+  }
+  80% {
+    -webkit-transform: rotate(-45deg) translate(-1px, -1px);
+            transform: rotate(-45deg) translate(-1px, -1px);
+  }
+  90% {
+    -webkit-transform: rotate(-45deg) translate(1px, 4px);
+            transform: rotate(-45deg) translate(1px, 4px);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(1px, -4px);
+            transform: rotate(-45deg) translate(1px, -4px);
   }
 }
 
 @keyframes shake {
-  10%, 90% {
-    -webkit-transform: translate3d(-1px, -1px, 0);
-            transform: translate3d(-1px, -1px, 0);
+  0% {
+    -webkit-transform: rotate(-45deg) translate(1px, 1px);
+            transform: rotate(-45deg) translate(1px, 1px);
   }
-  20%, 80% {
-    -webkit-transform: translate3d(2px, 2px, 0);
-            transform: translate3d(2px, 2px, 0);
+  10% {
+    -webkit-transform: rotate(-45deg) translate(-1px, -4px);
+            transform: rotate(-45deg) translate(-1px, -4px);
   }
-  30%, 50%, 70% {
-    -webkit-transform: translate3d(-6px, -4px, 0);
-            transform: translate3d(-6px, -4px, 0);
+  20% {
+    -webkit-transform: rotate(-45deg) translate(-5px, 0px);
+            transform: rotate(-45deg) translate(-5px, 0px);
   }
-  40%, 60% {
-    -webkit-transform: translate3d(6px, 4px, 0);
-            transform: translate3d(6px, 4px, 0);
+  30% {
+    -webkit-transform: rotate(-45deg) translate(5px, 4px);
+            transform: rotate(-45deg) translate(5px, 4px);
+  }
+  40% {
+    -webkit-transform: rotate(-45deg) translate(1px, -1px);
+            transform: rotate(-45deg) translate(1px, -1px);
+  }
+  50% {
+    -webkit-transform: rotate(-45deg) translate(-1px, 4px);
+            transform: rotate(-45deg) translate(-1px, 4px);
+  }
+  60% {
+    -webkit-transform: rotate(-45deg) translate(-5px, 1px);
+            transform: rotate(-45deg) translate(-5px, 1px);
+  }
+  70% {
+    -webkit-transform: rotate(-45deg) translate(5px, 1px);
+            transform: rotate(-45deg) translate(5px, 1px);
+  }
+  80% {
+    -webkit-transform: rotate(-45deg) translate(-1px, -1px);
+            transform: rotate(-45deg) translate(-1px, -1px);
+  }
+  90% {
+    -webkit-transform: rotate(-45deg) translate(1px, 4px);
+            transform: rotate(-45deg) translate(1px, 4px);
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(1px, -4px);
+            transform: rotate(-45deg) translate(1px, -4px);
   }
 }
+.bite {
+  -webkit-transform: translate(-40px, 100px) rotate(-45deg) scale(1.5);
+          transform: translate(-40px, 100px) rotate(-45deg) scale(1.5);
+}
+
+.no-bite {
+  -webkit-transform: rotate(-45deg) scale(1);
+          transform: rotate(-45deg) scale(1);
+}
+
 .blurb-cont {
   border: solid black 2px;
   width: 50%;
@@ -422,7 +494,7 @@ h1 {
 
 .img-cont2 {
   max-width: 20%;
-  max-height: 40%;
+  max-height: 100%;
   position: absolute;
   left: 44%;
   bottom: 32%;
@@ -436,13 +508,11 @@ h1 {
   bottom: 5%;
   left: 5%;
   width: 100px;
-  -webkit-transition: -webkit-transform 2s ease-out;
-  transition: -webkit-transform 2s ease-out;
-  transition: transform 2s ease-out;
-  transition: transform 2s ease-out, -webkit-transform 2s ease-out;
+  -webkit-transition: all 2s cubic-bezier(0.4, 1, 1, 1);
+  transition: all 2s cubic-bezier(0.4, 1, 1, 1);
 }
 
-.vase-cont:hover {
+.roll {
   -webkit-transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
           transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
 }

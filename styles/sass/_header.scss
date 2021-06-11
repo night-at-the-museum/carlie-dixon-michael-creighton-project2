@@ -23,37 +23,55 @@ h1 {
     position: absolute;
     top: 11px;
     right: -55px;
-    transform: rotate(-45deg);
+    transform: rotate(-45deg) scale(1);
     max-width: 45%;
-    transition: all 2s;
+    transition: transform 1s;
     z-index: 10;
 }
 
-.dino-head:hover {
-    // transform: translate(-40px, 60px) rotate(-45deg) scale(1.5);
-    // transform: translate(40px, 40px);
 
-  animation: shake 0.62s cubic-bezier(.36,.07,.19,.97) both;
-//   transform: translate3d(0, 0, 0) ;
-//   backface-visibility: hidden;
-//   perspective: 1000px;
+// this will shake the dino on hover
+// will last as long as the user hovers on dino
+.dino-head:hover {
+  animation: shake 0.5s;
+  transform: rotate(-45deg);
+  // infinite loop on hover
+  animation-iteration-count: infinite;
 }
 
 @keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, -1px, 0);
-  }
-  
-  20%, 80% {
-    transform: translate3d(2px, 2px, 0);
-  }
-
-  30%, 50%, 70% {
-    transform: translate3d(-6px, -4px, 0);
-  }
-
-  40%, 60% {
-    transform: translate3d(6px, 4px, 0);
-  }
+  0% { transform: rotate(-45deg) translate(1px, 1px) ; }
+  10% { transform: rotate(-45deg) translate(-1px, -4px) ; }
+  20% { transform: rotate(-45deg) translate(-5px, 0px) ; }
+  30% { transform: rotate(-45deg) translate(5px, 4px) ; }
+  40% { transform: rotate(-45deg) translate(1px, -1px) ; }
+  50% { transform: rotate(-45deg) translate(-1px, 4px) ; }
+  60% { transform: rotate(-45deg) translate(-5px, 1px) ; }
+  70% { transform: rotate(-45deg) translate(5px, 1px) ; }
+  80% { transform: rotate(-45deg) translate(-1px, -1px) ; }
+  90% { transform: rotate(-45deg) translate(1px, 4px) ; }
+  100% { transform: rotate(-45deg) translate(1px, -4px) ; }
 }
+   
+
+
+// this will grow the dino down towards the button
+// needs to be set to the active or hover of the button
+// may need to  have an event listener in JS   
+.bite {
+    
+    transform: translate(-40px, 100px) rotate(-45deg) scale(1.5);
+}
+.no-bite {
+    transform:  rotate(-45deg) scale(1);
+}
+
+   
+
+   
+   
+   
+
+
+
 

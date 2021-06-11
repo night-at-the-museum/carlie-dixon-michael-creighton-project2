@@ -10,17 +10,39 @@
     bottom: 5%;
     left: 5%;
     width: 100px;
-    transition: transform 2s ease-out;
+    transition: all 2s cubic-bezier(0.4, 1, 1, 1);
 }
 
-.vase-cont:hover {
-    // transform: scale(1.5) rotate(1080deg);
-
-
-    // transform: scale(0) rotate(1080deg) ;
-    // left: 90%;
-
+.roll {
     transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
-}   
 
+}
+// .vase-cont:hover {
+//     // transform: scale(1.5) rotate(1080deg);
+
+
+//     // transform: scale(0) rotate(1080deg) ;
+//     // left: 90%;
     
+
+//     // transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0.005);
+// }   
+
+// .vase-cont:hover {
+//     transform: translate(-40px, 60px) rotate(-45deg) scale(1.5);
+//     animation: roll 1s;
+
+// }
+// @keyframes roll {
+// 0% { transform: rotate(-45deg) ; }
+// 10% { transform: rotate(45deg)  ; }
+// 20% { transform: rotate(-45deg)  ; }
+// 30% { transform: rotate(-90deg) ; }
+// 40% { transform: rotate(-45deg)  ; }
+// 50% { transform: rotate(-90deg)  ; }
+// 60% { transform: rotate(-135deg)  ; }
+// 70% { transform: rotate(-180deg) ; }
+// 80% { transform: rotate(-225deg)  ; }
+// 90% { transform: rotate(-270deg) ; }
+// 100% { transform: rotate(-315deg)  ; }
+// }
