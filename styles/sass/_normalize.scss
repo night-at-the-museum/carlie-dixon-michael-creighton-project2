@@ -25,25 +25,8 @@ html {
 
 img {
     max-width: 100%;
+    height: auto;
     display: block;
 }
 
-header {
-    height: 15%;
-}
 
-main {
-    height: 80%;
-}
-
-footer {
-    background: $dark;
-    color: $light;
-    height: 5%;
-    text-align: center;
-}
-
-section.museum {
-    height: 100%;
-    position: relative;
-}
