@@ -144,8 +144,8 @@ galleryApp.exTitle = () => {
 galleryApp.artInfo = (title, artist) => {
     const artTitle = document.querySelector('.art-text');
     const artistName = document.querySelector('.artist-text');
-    artTitle.textContent = title;
-    artistName.textContent = artist;
+    artTitle.textContent = `Title: ${title}`;
+    artistName.textContent = `Artist: ${artist}`;
 }
 
 
