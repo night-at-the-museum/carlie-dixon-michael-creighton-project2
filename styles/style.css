@@ -251,8 +251,8 @@ p {
 }
 
 .wrapper {
-  max-width: 1500px;
-  width: 80%;
+  max-width: 2000px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -280,18 +280,23 @@ header {
 }
 
 main {
-  min-height: 75vh;
+  min-height: 73vh;
 }
 
 footer {
   background: #130d00;
   color: #d1cac2;
-  min-height: 5vh;
+  min-height: 7vh;
   text-align: center;
   position: relative;
 }
-footer p {
-  padding-top: calc(3vh - 23px);
+footer a {
+  color: #d1cac2;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 h2 {
@@ -614,7 +619,8 @@ select option {
   margin: 0 auto;
 }
 
-button.next {
+button.next,
+button.back {
   z-index: 30;
   background: transparent;
   border: none;
@@ -623,7 +629,14 @@ button.next {
   font-family: "Lato", sans-serif;
   position: absolute;
   right: 10px;
+}
+
+button.next {
   bottom: 45%;
+}
+
+button.back {
+  bottom: 38%;
 }
 
 .vase-cont {
@@ -732,8 +745,19 @@ button.next {
     padding-top: 0px;
   }
 
-  .next-letter {
-    display: none;
+  .next-letter,
+.back-letter {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+            clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
 @media (max-width: 420px) {
