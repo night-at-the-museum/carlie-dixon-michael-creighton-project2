@@ -27,15 +27,14 @@ galleryApp.aniListeners = () => {
     const vaseEl = document.querySelector('.vase-cont');
     vaseEl.addEventListener('mouseover', function() {
         vaseEl.classList.toggle('roll');
-
     });
 
     // listen for mouseover on next button
     const dinoNextEl = document.querySelector('.next');
     const dinoHead = document.querySelector('.dino-head');
     dinoNextEl.addEventListener('mouseover', function() {
-        dinoHead.classList.toggle('no-bite');
         dinoHead.classList.toggle('bite');
+        dinoHead.classList.toggle('no-bite');
     });
 };
 

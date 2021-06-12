@@ -26,11 +26,10 @@ h1 {
 
 .dino-head {
     position: absolute;
-    top: 11px;
-    right: -55px;
-    transform: rotate(-45deg) scale(1);
+    top: 1px;
+    right: -5px;
     max-width: 45%;
-    transition: transform 1s;
+    transition: transform 1s ;
     z-index: 10;
 }
 
@@ -39,37 +38,55 @@ h1 {
 // will last as long as the user hovers on dino
 .dino-head:hover {
   animation: shake 0.5s;
-  transform: rotate(-45deg);
   // infinite loop on hover
   animation-iteration-count: infinite;
 }
-
 @keyframes shake {
-  0% { transform: rotate(-45deg) translate(1px, 1px) ; }
-  10% { transform: rotate(-45deg) translate(-1px, -4px) ; }
-  20% { transform: rotate(-45deg) translate(-5px, 0px) ; }
-  30% { transform: rotate(-45deg) translate(5px, 4px) ; }
-  40% { transform: rotate(-45deg) translate(1px, -1px) ; }
-  50% { transform: rotate(-45deg) translate(-1px, 4px) ; }
-  60% { transform: rotate(-45deg) translate(-5px, 1px) ; }
-  70% { transform: rotate(-45deg) translate(5px, 1px) ; }
-  80% { transform: rotate(-45deg) translate(-1px, -1px) ; }
-  90% { transform: rotate(-45deg) translate(1px, 4px) ; }
-  100% { transform: rotate(-45deg) translate(1px, -4px) ; }
+  0% { transform: translate(1px, 1px) ; }
+  10% { transform: translate(-1px, -4px) ; }
+  20% { transform: translate(-5px, 0px) ; }
+  30% { transform: translate(5px, 4px) ; }
+  40% { transform: translate(1px, -1px) ; }
+  50% { transform: translate(-1px, 4px) ; }
+  60% { transform: translate(-5px, 1px) ; }
+  70% { transform: translate(5px, 1px) ; }
+  80% { transform: translate(-1px, -1px) ; }
+  90% { transform: translate(1px, 4px) ; }
+  100% { transform: translate(1px, -4px) ; }
 }
    
 
 
 // this will grow the dino down towards the button
-// needs to be set to the active or hover of the button
-// may need to  have an event listener in JS   
+// needs to be set to the active or hover of the button  
 .bite {
-    
-    transform: translate(-40px, 100px) rotate(-45deg) scale(1.5);
+    animation: gotcha 1s;
+
 }
+@keyframes gotcha {
+    0% { translate: (0,0); transform: scale(1);}
+    50% { translate: (-60px, 400px); transform: scale(1.7);}
+    100% { translate: (0, 0); transform: scale(1);}
+}
+
 .no-bite {
-    transform:  rotate(-45deg) scale(1);
+    animation: back 1s;
 }
+@keyframes back {
+    0% { translate: (0,0); transform: scale(1);}
+    // 50% { translate: (-60px, 400px); transform: scale(1.7);}
+    100% { translate: (0, 0); transform: scale(1);}
+}
+
+
+
+// .bite {
+    
+//     transform: translate(-40px, 100px)  scale(1.5);
+// }
+// .no-bite {
+//     transform:  translate(0, 0) scale(1);
+// }
 
    
 
