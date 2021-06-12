@@ -1,7 +1,14 @@
+body {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-color: $dark;
+}
+
 header {
     min-height: 20vh;
-    // position: relative;
-    // overflow: hidden;
 }
 
 main {
@@ -17,10 +24,6 @@ footer {
     p{
         padding-top: calc(3vh - 23px);
     }
-}
-
-h1 {
-    color: $light;
 }
 
 h2 {

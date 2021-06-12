@@ -18,6 +18,7 @@ choiceEl.addEventListener('click', function (e) {
     document.querySelector('.next').classList.remove('dont-show');
     galleryApp.nextButton();
     document.querySelector('.blurb').classList.add('dont-show');
+    document.querySelector('.museum').style.display = "initial";
     galleryApp.exTitle();
     });
 };

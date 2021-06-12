@@ -266,6 +266,15 @@ img {
   display: block;
 }
 
+body {
+  background-image: url(../assets/background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-color: #130d00;
+}
+
 header {
   min-height: 20vh;
 }
@@ -285,10 +294,6 @@ footer p {
   padding-top: calc(3vh - 23px);
 }
 
-h1 {
-  color: #d1cac2;
-}
-
 h2 {
   color: #B51A38;
   margin: 0;
@@ -300,20 +305,12 @@ p {
   margin: 5px 0;
 }
 
-body {
-  background-image: url(../assets/background.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  background-color: #130d00;
-}
-
 h1 {
+  color: #d1cac2;
   text-align: center;
   font-size: 3rem;
   padding-left: 10%;
-  padding-top: 1%;
+  padding-top: 50px;
   margin-right: 25%;
   font-family: "Luckiest Guy", cursive;
   text-shadow: 2px 2px 4px #130d00;
@@ -356,7 +353,7 @@ h1 {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
-  z-index: 10;
+  z-index: 20;
 }
 
 .dino-head:hover {
@@ -572,6 +569,10 @@ select option {
   padding: 5px;
 }
 
+.museum {
+  padding-top: 150px;
+}
+
 .museum-flex1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,12 +583,14 @@ select option {
   width: 80%;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
+  padding-top: 150px;
 }
 
 .art-info {
   margin: 0 15px;
   width: 30%;
-  min-width: 200px;
+  min-width: 300px;
+  z-index: 10;
 }
 
 .ex-title-cont,
@@ -602,7 +605,7 @@ select option {
   z-index: 10;
   width: 45%;
   max-height: 100%;
-  min-width: 400px;
+  min-width: 300px;
 }
 .img-cont2 img {
   border: 25px #753C19 ridge;
@@ -612,7 +615,7 @@ select option {
 }
 
 button.next {
-  z-index: 10;
+  z-index: 30;
   background: transparent;
   border: none;
   font-size: 40px;
@@ -682,5 +685,66 @@ button.next {
   100% {
     -webkit-transform: translateX(0) translateY(0) rotate(0deg) scale(1);
             transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+  }
+}
+@media (max-height: 800px) {
+  .vase-cont {
+    display: none;
+  }
+}
+@media (max-width: 790px) {
+  .art-info {
+    width: 45%;
+  }
+
+  .vase-cont {
+    display: none;
+  }
+
+  body {
+    background-image: none;
+  }
+}
+@media (max-width: 570px) {
+  select {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .choose {
+    margin-left: calc(50% - (103.35px / 2));
+  }
+
+  h1 {
+    margin-top: 20px;
+    padding-bottom: 35px;
+  }
+
+  .blurb-cont {
+    width: 90%;
+  }
+
+  .vase-cont {
+    display: none;
+  }
+
+  .museum-flex1 {
+    padding-top: 0px;
+  }
+
+  .next-letter {
+    display: none;
+  }
+}
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2.2rem;
+    padding-top: 15px;
+  }
+
+  .img-cont2 img,
+.art-info {
+    width: 200px;
+    min-width: 200px;
   }
 }
