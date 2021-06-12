@@ -1,14 +1,20 @@
+.museum {
+    padding-top: 150px;
+}
+
 .museum-flex1 {
     display: flex;
     justify-content: center;
     width: 80%;
     flex-wrap: wrap-reverse;
+    padding-top: 150px;
 }
 
 .art-info {
     margin: 0 15px;
     width: 30%;
-    min-width: 200px;
+    min-width: 300px;
+    z-index: 10;
 }
 
 .ex-title-cont,
@@ -19,15 +25,13 @@
     margin: 5px;
 }
 
-
 .img-cont2 {
     z-index: 10;
     width: 45%;
     max-height: 100%;
-    min-width: 400px;
+    min-width: 300px;
     img {
         border: 25px $secAccent ridge;
-        // z-index: 10;
         max-width: 300px;
         max-height: 300px;
         margin: 0 auto;
@@ -35,7 +39,7 @@
 }
 
 button.next {
-    z-index: 10;
+    z-index: 30;
     background: transparent;
     border: none;
     font-size: 40px;
