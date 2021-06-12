@@ -26,8 +26,9 @@ h1 {
 
 .dino-head {
     position: absolute;
-    top: 1px;
-    right: -5px;
+    top: 2px;
+    right: 0px;
+    transform: scale(1);
     max-width: 45%;
     transition: transform 1s ;
     z-index: 10;
