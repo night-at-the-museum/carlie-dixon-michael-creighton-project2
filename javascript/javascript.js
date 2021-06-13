@@ -96,7 +96,6 @@ galleryApp.createImgArray = () => {
     galleryApp.imageAPI.push(imageAPI)
     }
     // call for img src (function)
-    // galleryApp.counter = 0
     galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter]);
 };
 
