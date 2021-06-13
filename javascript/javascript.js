@@ -32,11 +32,13 @@ galleryApp.aniListeners = () => {
 
     // listen for mouseover on next button
     const dinoNextEl = document.querySelector('.next');
-    const dinoHead = document.querySelector('.dino-head');
-    dinoNextEl.addEventListener('mouseover', function() {
-        dinoHead.classList.toggle('bite');
-        dinoHead.classList.toggle('no-bite');
+    const dinoHead = document.querySelector('.bite');
+    dinoNextEl.addEventListener('mouseenter', function() {
+        dinoHead.classList.add('bite-me'); 
     });
+    dinoNextEl.addEventListener('mouseout', function() {
+        dinoHead.classList.remove('bite-me');
+    })
 };
 
 galleryApp.nextButton = () => {

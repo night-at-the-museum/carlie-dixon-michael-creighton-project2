@@ -25,8 +25,8 @@ h1 {
 
 .dino-head {
     position: absolute;
-    top: 2px;
-    right: 0px;
+    top: 4px;
+    right: 2px;
     transform: scale(1);
     max-width: 45%;
     transition: transform 1s ;
@@ -35,55 +35,31 @@ h1 {
 
 
 // this will shake the dino on hover
-// will last as long as the user hovers on dino
-.dino-head:hover {
+.shaker:hover {
     animation: shake 0.5s;
     // infinite loop on hover
     animation-iteration-count: infinite;
 }
+
 @keyframes shake {
-    0% { transform: translate(1px, 1px) ; }
-    10% { transform: translate(-1px, -4px) ; }
-    20% { transform: translate(-5px, 0px) ; }
-    30% { transform: translate(5px, 4px) ; }
-    40% { transform: translate(1px, -1px) ; }
-    50% { transform: translate(-1px, 4px) ; }
-    60% { transform: translate(-5px, 1px) ; }
-    70% { transform: translate(5px, 1px) ; }
-    80% { transform: translate(-1px, -1px) ; }
-    90% { transform: translate(1px, 4px) ; }
-    100% { transform: translate(1px, -4px) ; }
+    0% { @include animateShake(1px, 1px);}
+    10% { @include animateShake(0px, -4px);}
+    20% { @include animateShake(0px, 0px);}
+    30% { @include animateShake(5px, 4px);}
+    40% { @include animateShake(1px, -1px);}
+    50% { @include animateShake(0px, 4px);}
+    60% { @include animateShake(0px, 1px);}
+    70% { @include animateShake(5px, 1px);}
+    80% { @include animateShake(0px, -1px);}
+    90% { @include animateShake(1px, 4px);}
+    100% { @include animateShake(1px, -4px);}
 }
 
-
-
-// this will grow the dino down towards the button
-// needs to be set to the active or hover of the button  
-.bite {
-    animation: gotcha 1s;
+// this grows and moves the dino towards the button 
+// when the user mouses over the next button 
+.bite-me {
+    transform: translate(-35px, 50px)  scale(1.2) ; 
 }
-@keyframes gotcha {
-    0% { translate: (0,0); transform: scale(1);}
-    50% { translate: (-60px, 400px); transform: scale(1.7);}
-    100% { translate: (0, 0); transform: scale(1);}
-}
-
-.no-bite {
-    animation: back 1s;
-}
-@keyframes back {
-    0% { translate: (0,0); transform: scale(1);}
-    // 50% { translate: (-60px, 400px); transform: scale(1.7);}
-    100% { translate: (0, 0); transform: scale(1);}
-}
-
-
-// .bite {
-//     transform: translate(-40px, 100px)  scale(1.5);
-// }
-// .no-bite {
-//     transform:  translate(0, 0) scale(1);
-// }
 
 
 

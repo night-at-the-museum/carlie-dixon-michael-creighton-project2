@@ -1,0 +1,7 @@
+@mixin animateShake($leftPx, $rightPx) {
+  transform: translate($leftPx, $rightPx);
+}
+
+@mixin animateKick($transX, $scale: 0, $transY: 0, $rotate: 0) {
+  transform: translateX($transX) scale($scale) translateY($transY) rotate($rotate);
+}
