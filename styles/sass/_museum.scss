@@ -38,7 +38,8 @@
     }
 }
 
-button.next {
+button.next,
+button.back {
     z-index: 30;
     background: transparent;
     border: none;
@@ -47,5 +48,12 @@ button.next {
     font-family: $para;
     position: absolute;
     right: 10px;
+}
+
+button.next {
     bottom: 45%;
+}
+
+button.back {
+    bottom: 38%;
 }

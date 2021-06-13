@@ -11,7 +11,7 @@
     <title>Night at the Museum</title>
 </head>
 <body>
-    <Header>
+    <header class="wrapper">
         <h1>
             <span class="outter-flex">
                 NIGHT
@@ -25,8 +25,8 @@
         <div class="dino-head shaker bite">
             <img src="./assets/Trex-left-rotated.png" alt="Dinosaur skeleton's head.">
         </div>
-    </Header>
-    <main> 
+    </header>
+    <main class="wrapper">
         <section class="blurb">
             <div class="blurb-cont">
                 <div class="blurb-title-flex">
@@ -37,7 +37,7 @@
                         <h2>Welcome to The Art Institute of Chicago</h2>
                     </div>
                 </div>
-                <p>Here is your one way ticket through our museum. Beware, the artifacts don’t know you are here and we don’t know what they do when humans aren’t watching. </p>
+                <p>Beware, the artifacts don’t know you are here and we don’t know what they do when they think humans aren’t watching. </p>
                 <p>Where would you like to begin?</p>
                 <form action="">
                     <label for="exhibition-choice" class="sr-only"></label>
@@ -65,14 +65,22 @@
                     <img src="" alt="" class="art dont-show">
                 </div>
             </div>
-            <button class="next dont-show"><span class="next-letter">NEXT</span><i class="fas fa-arrow-right"></i></button>
+            <button class="next dont-show">
+                <span class="next-letter">Next</span>
+                <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="back dont-show">
+                <i class="fas fa-arrow-left"></i>
+                <span class="back-letter">Back</span>
+            </button>
         </section>
     </main>
     <footer>
         <div class="vase-cont">
             <img src="./assets/pngwing.com.png" alt="Black and gold ceramic vase.">
         </div>
-        <p>Copyright <i class="far fa-copyright"></i> 2021 Juno College</p>
+        <p>Created at <a href="https://junocollege.com/">Juno College</a> 2021</p>
+        <p>Made by Carlie Dixon and Michael Creighton</p>
     </footer>
     <script src="javascript/javascript.js"></script>
 </main>

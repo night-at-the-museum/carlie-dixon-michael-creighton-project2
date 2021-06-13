@@ -12,17 +12,23 @@ header {
 }
 
 main {
-    min-height: 75vh;
+    min-height: 73vh;
 }
 
 footer {
     background: $dark;
     color: $light;
-    min-height: 5vh;
+    min-height: 7vh;
     text-align: center;
     position: relative;
-    p{
-        padding-top: calc(3vh - 23px);
+    a {
+        color: $light;
+        text-decoration: none;
+        font-family: $para;
+    }
+
+    a:hover {
+        text-decoration: underline;
     }
 }
 

@@ -3,7 +3,7 @@ const galleryApp = {};
 galleryApp.url = 'https://api.artic.edu/api/v1/exhibitions?';
 galleryApp.exList = [];
 galleryApp.imageAPI = [];
-galleryApp.counter
+galleryApp.counter = 0;
 galleryApp.index
 
 // event listeners
@@ -17,6 +17,8 @@ choiceEl.addEventListener('click', function (e) {
     galleryApp.createImgArray();
     document.querySelector('.next').classList.remove('dont-show');
     galleryApp.nextButton();
+    document.querySelector('.back').classList.remove('dont-show');
+    galleryApp.backButton();
     document.querySelector('.blurb').classList.add('dont-show');
     document.querySelector('.museum').style.display = "initial";
     galleryApp.exTitle();
@@ -45,12 +47,37 @@ galleryApp.nextButton = () => {
     const nextEl = document.querySelector('.next')
     nextEl.addEventListener('click', function (e) {
         e.preventDefault ();
+        galleryApp.counter += 1;
         if (galleryApp.counter > 4) {
-            if (galleryApp.index + 1 >= galleryApp.exList.length) {
+            if (galleryApp.index + 1 === galleryApp.exList.length) {
                 galleryApp.index = 0;
+                galleryApp.counter = 0;
                 galleryApp.exTitle();
             } else {
                 galleryApp.index += 1;
+                galleryApp.counter = 0;
+                galleryApp.exTitle();
+            }
+            galleryApp.createImgArray();
+        }else {
+        galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter]);
+        };
+    })
+};
+
+galleryApp.backButton = () => {
+    const backEl = document.querySelector('.back')
+    backEl.addEventListener('click', function (e) {
+        e.preventDefault ();
+        galleryApp.counter -= 1;
+        if (galleryApp.counter <= 0) {
+            if (galleryApp.index <= 0) {
+                galleryApp.index = galleryApp.exList.length - 1;
+                galleryApp.counter = 4;
+                galleryApp.exTitle();
+            } else {
+                galleryApp.index -= 1;
+                galleryApp.counter = 4;
                 galleryApp.exTitle();
             }
             galleryApp.createImgArray();
@@ -71,8 +98,7 @@ galleryApp.createImgArray = () => {
     galleryApp.imageAPI.push(imageAPI)
     }
     // call for img src (function)
-    galleryApp.counter = 0
-    galleryApp.getImage(galleryApp.imageAPI[0]);
+    galleryApp.getImage(galleryApp.imageAPI[galleryApp.counter]);
 };
 
 
@@ -118,8 +144,6 @@ galleryApp.exOptions = (galleries) => {
 
 // takes selected image and produces the src for display
 galleryApp.getImage = (imageAPI) => {
-    
-    galleryApp.counter += 1;
     fetch(imageAPI)
     .then(secondResult => {
         return secondResult.json();
@@ -129,6 +153,7 @@ galleryApp.getImage = (imageAPI) => {
         const displayImage = document.querySelector(".art");
         const textCont = document.querySelector(".art-text-cont")
         displayImage.src = `https://www.artic.edu/iiif/2/${imageId}/full/843,/0/default.jpg`;
+        displayImage.alt = `artwork titled: ${secondJsonRes.data.title}`;
         displayImage.classList.remove('dont-show');
         textCont.classList.remove('dont-show');
         galleryApp.artInfo(secondJsonRes.data.title, secondJsonRes.data.artist_title);
