@@ -571,7 +571,8 @@ select option {
   border: none;
   border-radius: 7px;
   color: #d1cac2;
-  padding: 5px;
+  padding: 6px;
+  font-family: "Lato", sans-serif;
 }
 
 .museum {

@@ -1,7 +1,3 @@
-.blurb {
-    // min-height: 56vh;
-}
-
 .blurb-cont {
     border: $dark 1px solid;
     width: 50%;
@@ -42,5 +38,6 @@ select {
     border: none;
     border-radius: 7px;
     color: $light;
-    padding: 5px;
+    padding: 6px;
+    font-family: $para;
 }
