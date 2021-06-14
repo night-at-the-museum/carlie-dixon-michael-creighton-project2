@@ -9,6 +9,13 @@ $titles: 'Lora', serif;
 $para: 'Lato', sans-serif;
 
 // mixins
+@mixin animateShake ($leftPx, $rightPx) {
+    transform: translate($leftPx, $rightPx);
+}
+
+@mixin animateKick ($transX, $scale:0, $transY:0vh, $rotate:0deg) {
+    transform: translateX($transX) translateY($transY) rotate($rotate) scale($scale);
+}
 
 // partials
 @import "normalize";

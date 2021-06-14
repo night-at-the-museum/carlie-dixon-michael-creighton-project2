@@ -597,16 +597,16 @@ button.back {
             transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0);
   }
   75% {
-    -webkit-transform: translateX(-300px) translateY(0) rotate(0deg) scale(0);
-            transform: translateX(-300px) translateY(0) rotate(0deg) scale(0);
+    -webkit-transform: translateX(-300vw) translateY(0vh) rotate(0deg) scale(0);
+            transform: translateX(-300vw) translateY(0vh) rotate(0deg) scale(0);
   }
   80% {
-    -webkit-transform: translateX(-150px) translateY(0) rotate(0deg) scale(0);
-            transform: translateX(-150px) translateY(0) rotate(0deg) scale(0);
+    -webkit-transform: translateX(-150vw) translateY(0vh) rotate(0deg) scale(0);
+            transform: translateX(-150vw) translateY(0vh) rotate(0deg) scale(0);
   }
   100% {
-    -webkit-transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-            transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    -webkit-transform: translateX(0) translateY(0vh) rotate(0deg) scale(1);
+            transform: translateX(0) translateY(0vh) rotate(0deg) scale(1);
   }
 }
 
@@ -616,16 +616,16 @@ button.back {
             transform: translateX(39vw) translateY(-25vh) rotate(500deg) scale(0);
   }
   75% {
-    -webkit-transform: translateX(-300px) translateY(0) rotate(0deg) scale(0);
-            transform: translateX(-300px) translateY(0) rotate(0deg) scale(0);
+    -webkit-transform: translateX(-300vw) translateY(0vh) rotate(0deg) scale(0);
+            transform: translateX(-300vw) translateY(0vh) rotate(0deg) scale(0);
   }
   80% {
-    -webkit-transform: translateX(-150px) translateY(0) rotate(0deg) scale(0);
-            transform: translateX(-150px) translateY(0) rotate(0deg) scale(0);
+    -webkit-transform: translateX(-150vw) translateY(0vh) rotate(0deg) scale(0);
+            transform: translateX(-150vw) translateY(0vh) rotate(0deg) scale(0);
   }
   100% {
-    -webkit-transform: translateX(0) translateY(0) rotate(0deg) scale(1);
-            transform: translateX(0) translateY(0) rotate(0deg) scale(1);
+    -webkit-transform: translateX(0) translateY(0vh) rotate(0deg) scale(1);
+            transform: translateX(0) translateY(0vh) rotate(0deg) scale(1);
   }
 }
 @media (max-height: 800px) {

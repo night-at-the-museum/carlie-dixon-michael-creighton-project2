@@ -16,9 +16,9 @@
 }
 
 @keyframes vase-kick {
-    50% { @include animateKick(39vh, 0, -25vh, 500deg);}
-    75% { @include animateKick(-300px);}
-    80% { @include animateKick(-150px);}
-    100% { @include animateKick(0px, 1);}
+    50% { @include animateKick (39vw, 0, -25vh, 500deg);}
+    75% { @include animateKick (-300vw);}
+    80% { @include animateKick (-150vw);}
+    100% { @include animateKick (0, 1);}
 }
 
